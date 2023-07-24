@@ -1,0 +1,226 @@
+$primary-color: #4EB7C4;
+$light-gray-color: #F5F8FA;
+$white-color: #FFFFFF;
+$black-color:#14141A;
+
+.navbarComponent{
+  .home-header{
+    padding: 0px !important;
+  }
+.logo{
+  display: flex;
+  align-items: center;
+}
+  .ant-layout{
+    height: 66px !important;
+
+  }
+  .ant-layout .ant-layout-header {
+    line-height: 6px;
+    justify-content: space-between;
+    height: auto !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+:where(.css-dev-only-do-not-override-dfjnss).ant-btn-primary:not(:disabled):hover{
+  color:$white-color !important;
+  background-color: $primary-color !important;
+}
+.ant-btn:active, .ant-btn:focus, .ant-btn:hover{
+  color: $white-color !important;
+  background-color:$primary-color !important;
+}
+.ant-menu {
+  box-sizing: border-box;
+  font-variant: tabular-nums;
+  font-feature-settings: "tnum";
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 0;
+  text-align: left;
+  list-style: none;
+  background: transparent !important;
+  outline: 0;
+  box-shadow:none !important;
+  align-items: center !important;
+  transition: background 0.3s, width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
+  .ant-menu-item{
+    color: $primary-color !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+  }
+  .ant-menu-item-selected{
+    color: #DB2624 !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+  }
+  
+}
+
+.navbar-btn{
+  background-color: transparent !important;
+  border-color: $primary-color !important;
+  font-size: 16px !important;
+ color: $primary-color;
+ border-radius: 30px !important;
+}
+
+}
+.heading-bg{
+    background-image: url("../images/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .crousle{
+      max-width: calc(100vw - 7vw);
+      transform: translate(4vw, 0vw);
+      .slick-prev, .slick-next{
+        display: none !important;
+      }
+    }
+    .slick-dots {
+      position: absolute;
+      bottom: 29px  !important;
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 0;
+      list-style: none;
+      text-align: center;
+      color: white;
+    }
+    
+    .slick-dots li.slick-active button:before {
+      opacity: none !important;
+      color: white !important;
+      font-size: 15px !important;
+    }
+    .slick-dots li button:before{
+      font-family: 'slick';
+      font-size: 16px;
+      line-height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      content: '•';
+      text-align: center;
+      opacity: .25;
+      color: transparent;
+      border: 2px solid lightgray !important;
+      border-radius: 50px;
+      -webkit-font-smoothing: antialiased;
+    }
+.heading-title{
+  font-size: 1.7vw !important;
+  color: $white-color !important;
+  text-align: center !important;
+  line-height: 2.5rem !important;
+  padding: 3rem 8rem 0rem 8rem !important ;
+}
+
+.slider-slide {
+ 
+      display: flex !important;
+      justify-content: center !important;
+   
+   }
+  
+}
+
+
+
+.vission{
+  .vission-icon{
+    border: 2px solid #f1f1f1;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vission-title{
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
+}
+
+  }
+
+.services{
+  .services-image{
+    height: 100%;
+  }
+
+.service-head{
+  font-size: 20px;
+  font-weight: 700;
+  color: $primary-color;
+}
+.service-main-title{
+  font-size: 36px;
+  font-weight: 700;
+  color: black;
+}
+.service-title{
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+}
+.service-description{
+  font-size: 20px;
+  font-weight: 500;
+   color: black;
+}
+}
+.contact{
+  .contact-main{
+    font-size: 20px;
+    font-weight: 700;
+    color: $primary-color;
+  }
+  .contact-heading{
+    font-size: 36px;
+    font-weight: 700;
+    color: black;
+  }
+  .contact-icon{
+    border: 2px solid lightgray;
+    border-radius: 50px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-device-width: 320px) and (max-device-width: 768px) {
+  .contact {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  .social-icon{
+    justify-content: center !important;
+  }
+  .heading-bg{
+    .heading-title{
+      font-size: 1.7vw !important;
+      color: $white-color !important;
+      text-align: center !important;
+       line-height: 1.5rem !important;
+       padding: 2rem !important ;
+    }
+  }}
+  // @media only screen and (max-width: 640px) {
+  //   .crousle{
+  //     max-width: calc(100vw - 15vw);
+  //     transform: translate(4vw, 0vw);
+  //   }
+  // }
+ 

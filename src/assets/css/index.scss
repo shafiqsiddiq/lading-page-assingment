@@ -1,0 +1,385 @@
+$primary-color: #175ABF;
+$light-gray-color: #f5f8fa;
+$white-color: #ffffff;
+$black-color: #000000;
+
+body {
+  font-family: "Nunito", sans-serif !important;
+  background-color: #FFFFFF !important;
+  margin: 0;
+  * {
+    font-family: "Nunito", sans-serif !important;
+  }
+}
+
+html {
+  --dark-gray-color: rgba(0, 0, 0, 0.35);
+  font-family: "Nunito", sans-serif;
+}
+
+::placeholder {
+  color: #d4d9e0 !important;
+}
+a {
+  font-size: 13.6px !important;
+  @media (min-width: 768px) {
+    .sidebar.toggled a {
+      font-size: 12px !important;
+    }
+  }
+}
+
+.loaderDiv {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(255 255 255 / 80%);
+  z-index: 99999;
+  cursor: pointer;
+
+  .spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: #4a5fb2;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  .spinner-body {
+    width: 5rem;
+    height: 5rem;
+    color: #4a5fb2;
+  }
+}
+.loaderDiv.for-request {
+  background-color: rgb(0 0 0 / 32%);
+}
+.cursor-pointer:hover {
+  cursor: pointer;
+}
+
+.sider-not-collapsed {
+  margin-left: 260px;
+}
+.sider-collapsed {
+  margin-left: 0;
+}
+.ant-layout {
+  .ant-layout-sider-children {
+    .ant-menu {
+      background-color: $white-color !important;
+      padding: 0px 10px;
+      font-size: 18px;
+      font-weight: 400;
+      .ant-menu-item:active {
+        background-color: rgba(0, 0, 0, 0.06);
+      }
+      .ant-menu-item {
+        a {
+          font-size: 17px !important;
+        }
+      }
+    }
+    
+    .ant-menu-item-selected,
+    .ant-menu-item-selected:hover{
+      background-color: $primary-color;
+      color: $white-color !important;
+      a {
+        color: $white-color !important;
+      }
+    }
+    background-color: $white-color;
+    border-radius:0;
+    align-items: center;
+  }
+  .ant-layout-header {
+    background-color: $white-color;
+    line-height: 6px;
+    justify-content: space-between;
+    padding: 1.5rem 2.5rem !important;
+    height: 90px;
+  }
+  .ant-layout-sider {
+    background: linear-gradient(#ffffff00, #ffffff);
+    // max-width: 260px !important;
+    // min-width: 260px !important;
+    // width: 260px !important;
+  }
+  height: 100vh;
+}
+
+// .ant-menu {
+//   .ant-menu-item {
+//     color: $white-color;
+//   }
+// }
+
+.ant-layout-content {
+  margin: 110px 2.5rem 10px 2.5rem !important;
+  min-height: unset !important;
+  padding-bottom: 50px;
+}
+
+.sidebar {
+  overflow: auto;
+  height: 100vh;
+  position: fixed !important;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10 !important;
+}
+
+.user-avatar {
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid $primary-color;
+}
+
+.font-sm {
+  font-size: 12px;
+}
+
+.font-md {
+  font-size: 16px;
+}
+
+.font-lg {
+  font-size: 22px;
+}
+
+.text-black {
+  color: $black-color;
+}
+
+.font-nunito {
+  font-family: "Nunito", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #175ABF;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #175ABF;
+}
+.ant-layout-footer {
+  padding: 6px;
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 12px;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+.page-title {
+  font-family: "Nunito", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  color: #000000;
+}
+
+// @media (max-width: 576px) {
+//   .ant-layout{
+//     .ant-layout-header{
+//       display: flex;
+//       justify-content: end;
+//     }
+//   }
+// }
+
+@media (max-width: 768px) {
+  .ant-layout {
+    position: relative;
+    .ant-layout-sider {
+      z-index: 2;
+      height: 100vh;
+    }
+  }
+}
+
+.visibility-none {
+  visibility: hidden;
+}
+.sidebar-trigger-collapsed {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .sidebar-trigger-collapsed {
+    display: none !important;
+  }
+}
+
+.close-icon {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.auth-parent {
+  height: calc(100vh - 30px);
+  .login-img-overlay{
+    background-color: #175ABF;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 7px;
+    right: 7px;
+    width: calc(100% - 14px);
+    height: 100%;
+  }
+  .login-form{
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+  }
+  .login-img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0.35rem;
+    overflow: hidden;
+    height: calc(100vh - 230px);
+    min-height: 100%;
+  }
+  .login-logo-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+  }
+}
+
+.labels {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.ant-input-affix-wrapper:hover .ant-input-prefix {
+  color: $primary-color;
+}
+
+.ant-input-affix-wrapper .ant-input-prefix {
+  color: #999999;
+}
+
+.login-card {
+  box-shadow: 0px 2px 13px -1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 2px 13px -1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 13px -1px rgba(0, 0, 0, 0.1);
+}
+
+
+.login-inner-card {
+  position: absolute !important;
+  bottom: 10px;
+  left: 15px !important;
+  right: 15px !important;
+  background: none !important;
+  // width: 88% !important;
+  .ant-card-body {
+    padding: 1.3rem 1rem;
+    border-radius: 0.35rem !important;
+    background: rgb(255 255 255 / 73%);
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+  }
+}
+
+.register-genetic-kit-parent {
+  .ant-card-body {
+    padding: 0.8rem;
+  }
+}
+// Generic classes
+
+.bg-blue {
+  background-color: #d2edf9 !important;
+}
+.bg-gray {
+  background-color: #f2f2f2 !important;
+}
+.bg-light-blue {
+  background-color: #e9f6fc !important;
+}
+.ant-btn-submit {
+  background-color: $primary-color !important;
+  color: #fff !important;
+  font-weight: 400 !important;
+  border: none !important;
+}
+
+.btn-outline {
+  border: 2px solid $primary-color !important;
+  background: transparent !important;
+  height: 38px !important;
+  padding: 8.5px 0.6rem !important;
+}
+
+.ant-checkbox .ant-checkbox-inner {
+  border: 1px solid #cccccc !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 3px !important;
+}
+.fs-xs {
+  font-size: 0.8rem;
+}
+
+.fs-sm {
+  font-size: 1rem;
+}
+
+.fs-lg {
+  font-size: 1.5rem !important;
+}
+
+.fw-bold {
+  font-weight: 500 !important;
+}
+
+.fw-heavy {
+  font-weight: 600 !important;
+}
+
+.fw-normal {
+  font-weight: 400 !important;
+}
+
+.fw-light {
+  font-weight: 300 !important;
+}
+
+.fs-warning {
+  font-size: 0.95rem;
+}
+
+.react-tel-input .form-control {
+  height: 39px !important;
+  border-radius: 0.35rem !important;
+}
+.react-tel-input .selected-flag {
+  border-radius: 0.35rem;
+}
